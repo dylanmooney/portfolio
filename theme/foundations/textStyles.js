@@ -1,0 +1,81 @@
+export const textStyles = {
+	h1: {
+		display: 'block',
+		color: 'gray.100',
+		fontSize: { base: '4xl', md: '5xl', lg: '6xl', '2xl': '7xl' },
+		fontWeight: 'bold',
+		letterSpacing: '-2%',
+	},
+	h2: {
+		color: 'gray.200',
+		fontSize: { base: '4xl', xl: '5xl' },
+		fontWeight: 'bold',
+		mb: { base: 4, lg: 6 },
+	},
+	h3: {
+		color: 'gray.200',
+		fontWeight: 'bold',
+		fontSize: {
+			base: 'xl',
+			xl: '3xl',
+		},
+		mb: 2,
+	},
+	h4: {
+		w: 'full',
+		display: 'flex',
+		alignItems: 'center',
+		color: 'gray.400',
+		textTransform: 'uppercase',
+		fontWeight: 'bold',
+		fontSize: {
+			base: 'lg',
+			xl: 'xl',
+		},
+		mb: 4,
+		_before: {
+			content: "''",
+			top: 0,
+			left: 0,
+			height: '1px',
+			width: '24px',
+			bgGradient:
+				'linear(90deg, gray.800, gray.800 50%, transparent 0, transparent)',
+			bgSize: '8px 1px',
+			pos: 'relative',
+			marginRight: '8px',
+			display: 'block',
+		},
+		_after: {
+			content: "''",
+			top: 0,
+			right: 0,
+			height: '1px',
+			flex: 1,
+			bgGradient:
+				'linear(90deg, gray.800, gray.800 50%, transparent 0, transparent)',
+			bgSize: '8px 1px',
+			pos: 'relative',
+			marginLeft: '8px',
+			display: 'block',
+		},
+	},
+	p: {
+		color: 'gray.400',
+		fontSize: { base: 'sm', md: 'md', '2xl': 'lg' },
+		lineHeight: '200%',
+		_notLast: {
+			mb: 2,
+		},
+	},
+	caption: {
+		bgGradient: 'linear(to-tr, strawberry, sunset)',
+		bgClip: 'text',
+		display: 'block',
+		fontFamily: 'Source Sans Pro',
+		fontSize: { base: 'lg', sm: '2xl' },
+		fontWeight: 'semibold',
+		letterSpacing: 'wide',
+		mb: 2,
+	},
+};
