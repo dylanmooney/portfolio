@@ -4,12 +4,12 @@ export const skills = [
 		items: ['JavaScript (ES6+)', 'HTML', 'CSS', 'SCSS', 'PHP', 'SQL', 'JSON'],
 	},
 	{
-		title: 'Frameworks',
+		title: 'Frameworks & Libraries',
 		items: ['Next.js', 'React', 'Node.js', 'Tailwind', 'Chakra UI'],
 	},
 	{
 		title: 'Tools',
-		items: ['Git', 'VSCode', 'Linux', 'Digital Ocean'],
+		items: ['Git', 'VSCode', 'Linux', 'Digital Ocean', 'Sizzy'],
 	},
 ];
 
