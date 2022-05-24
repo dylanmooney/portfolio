@@ -9,8 +9,8 @@ import {
 import { BiChevronDown } from 'react-icons/bi';
 
 import { ResponsiveButton } from '../components/ResponsiveButton';
-import { ScrollLink } from '../components/ScrollLink';
 import { Bounce } from '../animations/Bounce';
+import { animateScroll } from 'react-scroll/modules';
 
 export const Hero = () => (
 	<Container
@@ -26,19 +26,31 @@ export const Hero = () => (
 					I build experiences for the web.
 				</Box>
 			</Heading>
-			<ScrollLink to='projects'>
-				<ResponsiveButton variant='gradient'>View Projects</ResponsiveButton>
-			</ScrollLink>
+
+			<ResponsiveButton
+				as='a'
+				href='#about'
+				variant='gradient'
+				aria-label='scroll down'
+				onClick={(e) => {
+					e.preventDefault();
+					animateScroll.scrollTo('projects');
+				}}>
+				View Projects
+			</ResponsiveButton>
 		</Box>
 
 		<Bounce textAlign='center'>
-			<ScrollLink to='about'>
-				<IconButton
-					variant='ghost'
-					size='xl'
-					icon={<Icon as={BiChevronDown} w={8} h={8} />}
-				/>
-			</ScrollLink>
+			<IconButton
+				onClick={(e) => {
+					e.preventDefault();
+					animateScroll.scrollTo('about');
+				}}
+				aria-label='scroll to about'
+				variant='ghost'
+				size='xl'
+				icon={<Icon as={BiChevronDown} w={8} h={8} />}
+			/>
 		</Bounce>
 	</Container>
 );

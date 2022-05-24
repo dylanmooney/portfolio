@@ -37,7 +37,7 @@ export const Skills = ({ skills }) =>
 				lg: { mb: 6 },
 				xl: { mb: 8 },
 			}}>
-			<Box as='h4' textStyle='h4'>
+			<Box as='h3' textStyle='h4'>
 				{title}
 			</Box>
 			<Wrap

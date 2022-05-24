@@ -55,6 +55,7 @@ export const Project = ({ project, isReversed }) => {
 					objectPosition='top'
 					objectFit='cover'
 					sx={{ maskImage }}
+					alt={title}
 				/>
 			</Box>
 			<Box flex={1}>
