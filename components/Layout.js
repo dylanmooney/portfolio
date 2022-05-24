@@ -1,4 +1,4 @@
-import { GuidelineGrid } from './GuideLineGrid';
+import { GuidelineGrid } from './GuidelineGrid';
 import { Navigation } from './Navigation';
 import { SocialRibbon } from './SocialRibbon';
 
