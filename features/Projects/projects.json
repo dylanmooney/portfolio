@@ -1,0 +1,39 @@
+[
+	{
+		"title": "National Museum of Scotland",
+		"description": "MERN application for booking museum tickets. Features modern, responsive frontend with event filter and booking system that is connected to an API that handles user authentication, event booking, mock payment processing and PDF ticket generation.",
+		"technologies": [
+			"React",
+			"Node.js",
+			"Express.js",
+			"MongoDB",
+			"Styled Components",
+			"Stripe"
+		],
+		"imageUrl": "/images/nms.png",
+		"links": {
+			"demo": "https://dmnmse.herokuapp.com",
+			"repo": "https://github.com/dylanmooney/nms"
+		}
+	},
+	{
+		"title": "AnimalSnap",
+		"description": "Prototype PWA that facilitates the tracking and conservation of local wildlife by allowing users to snap pictures of animals with their recent location and status. Features a modern user interface, offline persistent storage, and access to native device APIs (Camera, Location)",
+		"technologies": ["React", "Redux", "Chakra UI", "Mapbox"],
+		"imageUrl": "/images/as.png",
+		"links": {
+			"demo": "https://animal-snap.vercel.app",
+			"repo": "https://github.com/dylanmooney/animal-snap"
+		}
+	},
+	{
+		"title": "Connecting scotland",
+		"description": "A freelance project built for a Community Interest Group. Bespoke design enhanced with Advanced Custom Fields for flexibility and extensibility. Automatic caching, image processing and CDN utilisation for optimal page speeds.",
+		"technologies": ["PHP", "WordPress", "ACF"],
+		"imageUrl": "/images/cs.png",
+		"links": {
+			"demo": "https://connectingscotland.org",
+			"repo": ""
+		}
+	}
+]

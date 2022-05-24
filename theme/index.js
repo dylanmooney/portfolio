@@ -11,7 +11,7 @@ import { styles } from './styles';
 import { colors, fonts, textStyles } from './foundations';
 
 // Component style overrides
-import { Button, Container } from './components';
+import { Button, Container, Card, Badge } from './components';
 
 const overrides = {
 	config,
@@ -22,6 +22,8 @@ const overrides = {
 	components: {
 		Button,
 		Container,
+		Card,
+		Badge,
 	},
 };
 

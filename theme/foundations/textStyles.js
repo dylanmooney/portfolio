@@ -8,15 +8,17 @@ export const textStyles = {
 	},
 	h2: {
 		color: 'gray.200',
-		fontSize: { base: '4xl', xl: '5xl' },
+		fontSize: { base: '3xl', md: '4xl' },
 		fontWeight: 'bold',
-		mb: { base: 4, lg: 6 },
+		mb: { base: 2 },
+		textAlign: 'center',
 	},
 	h3: {
 		color: 'gray.200',
 		fontWeight: 'bold',
 		fontSize: {
 			base: 'xl',
+			md: '2xl',
 			xl: '3xl',
 		},
 		mb: 2,
@@ -29,10 +31,13 @@ export const textStyles = {
 		textTransform: 'uppercase',
 		fontWeight: 'bold',
 		fontSize: {
-			base: 'lg',
-			xl: 'xl',
+			base: 'sm',
+			sm: 'md',
+			md: 'lg',
 		},
-		mb: 4,
+		mb: {
+			base: 3,
+		},
 		_before: {
 			content: "''",
 			top: 0,

@@ -11,7 +11,7 @@ export default function Home() {
 			<Head>
 				<title>Dylan Mooney</title>
 				<meta name='description' content='My portfolio of work' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/logo.ico' />
 			</Head>
 			<Hero />
 			<AboutMe />

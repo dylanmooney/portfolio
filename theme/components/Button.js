@@ -12,14 +12,12 @@ export const Button = {
 				direction = 'to top right',
 				from = 'strawberry',
 				to = 'sunset',
-				defaultBg = '#171923',
+				defaultbg = '#171923',
 			} = props;
-
-			console.log(props);
 
 			return {
 				border: '2px solid transparent',
-				bg: `linear-gradient(${defaultBg}, ${defaultBg}) padding-box, linear-gradient(${direction}, ${props.theme.colors[from]}, ${props.theme.colors[to]}) border-box`,
+				bg: `linear-gradient(${defaultbg}, ${defaultbg}) padding-box, linear-gradient(${direction}, ${props.theme.colors[from]}, ${props.theme.colors[to]}) border-box`,
 				transition: 'background 1s ease-in-out',
 				pos: 'relative',
 				zIndex: 1,
@@ -32,7 +30,7 @@ export const Button = {
 					left: 0,
 					bg: `linear-gradient(${direction}, ${props.theme.colors[from]}, ${props.theme.colors[to]})`,
 					transitionProperty: 'var(--chakra-transition-property-common)',
-					'transition-duration': 'var(--chakra-transition-duration-normal)',
+					transitionDuration: 'var(--chakra-transition-duration-normal)',
 					opacity: 0,
 					zIndex: -1,
 				},
@@ -43,6 +41,17 @@ export const Button = {
 				},
 				size: 'xl',
 			};
+		},
+		ghost: {
+			_hover: {
+				bg: 'blackAlpha.400',
+			},
+			_active: {
+				bg: 'blackAlpha.500',
+			},
+			_focus: {
+				bg: 'blackAlpha.500',
+			},
 		},
 	},
 };

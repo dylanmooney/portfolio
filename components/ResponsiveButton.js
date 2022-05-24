@@ -1,7 +1,10 @@
-import { Button, useBreakpointValue } from '@chakra-ui/react';
+import { Button, useBreakpointValue, forwardRef } from '@chakra-ui/react';
 
-export const ResponsiveButton = ({ children, ...props }) => (
-	<Button size={useBreakpointValue({ base: 'md', lg: 'lg' })} {...props}>
+export const ResponsiveButton = forwardRef(({ children, ...props }, ref) => (
+	<Button
+		size={useBreakpointValue({ base: 'md', lg: 'lg' })}
+		ref={ref}
+		{...props}>
 		{children}
 	</Button>
-);
+));

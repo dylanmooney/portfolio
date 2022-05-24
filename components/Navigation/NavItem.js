@@ -1,7 +1,8 @@
 import { ListItem } from '@chakra-ui/react';
+import { ScrollLink } from '../ScrollLink';
 
-export const NavItem = ({ href, text, ...props }) => (
-	<ListItem {...props}>
-		<a href={href}>{text}</a>
+export const NavItem = ({ to, text, ...props }) => (
+	<ListItem {...props} cursor='pointer'>
+		<ScrollLink to={to}>{text}</ScrollLink>
 	</ListItem>
 );

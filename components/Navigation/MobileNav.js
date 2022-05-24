@@ -6,11 +6,11 @@ import {
 	DrawerOverlay,
 	DrawerContent,
 	DrawerCloseButton,
-	Input,
 	Button,
 	VStack,
 	StackDivider,
 } from '@chakra-ui/react';
+import { ScrollLink } from '../ScrollLink';
 
 export const MobileNav = ({ isOpen, onClose, routes }) => {
 	return (
@@ -28,21 +28,20 @@ export const MobileNav = ({ isOpen, onClose, routes }) => {
 						w='full'
 						justifyContent='stretch'
 						divider={<StackDivider borderColor='gray.800' />}>
-						{routes.map(({ href, text }, idx) => (
-							<Button
-								key={idx}
-								w='full'
-								variant='ghost'
-								size='lg'
-								href={href}
-								color='gray.200'>
-								{text}
-							</Button>
+						{routes.map(({ to, text }, idx) => (
+							<ScrollLink key={idx} to={to} style={{ width: '100%' }}>
+								<Button
+									w='full'
+									variant='ghost'
+									size='lg'
+									color='gray.200'
+									onClick={() => setTimeout(onClose, 500)}>
+									{text}
+								</Button>
+							</ScrollLink>
 						))}
 					</VStack>
 				</DrawerBody>
-
-				<DrawerFooter></DrawerFooter>
 			</DrawerContent>
 		</Drawer>
 	);

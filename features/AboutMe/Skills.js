@@ -29,21 +29,30 @@ const SVGComponent = (props) => (
 
 export const Skills = ({ skills }) =>
 	skills.map(({ title, items }) => (
-		<Box key={title} _notLast={{ mb: 8 }}>
+		<Box
+			key={title}
+			_notLast={{
+				base: { mb: 4 },
+				sm: { mb: 8 },
+				lg: { mb: 6 },
+				xl: { mb: 8 },
+			}}>
 			<Box as='h4' textStyle='h4'>
 				{title}
 			</Box>
 			<Wrap
 				display='flex'
-				spacingX='7'
-				spacingY={{ base: '4', xl: '6' }}
+				spacingX={{ base: 4, sm: 6 }}
+				spacingY={{ base: 2, sm: 4, lg: 2, xl: 4 }}
 				px='2'>
 				{items.map((item) => (
 					<WrapItem key={item} fontSize='xl' alignItems='center'>
 						<Icon w={{ base: '4', sm: '6' }} h={{ base: '4', sm: '6' }} mr='2'>
 							<SVGComponent />
 						</Icon>
-						<Text textStyle='p'>{item}</Text>
+						<Text textStyle='p' color='gray.300'>
+							{item}
+						</Text>
 					</WrapItem>
 				))}
 			</Wrap>

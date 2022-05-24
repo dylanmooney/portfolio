@@ -19,6 +19,7 @@ export const SocialRibbon = () => (
 			borderBottomRightRadius='sm'
 			boxShadow='lg'
 			pos='relative'
+			bg='#14161F'
 			mb='6'
 			_after={{
 				content: "''",

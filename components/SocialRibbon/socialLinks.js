@@ -4,21 +4,16 @@ export const socialLinks = [
 	{
 		icon: <FiMail />,
 		label: 'Email',
-		href: 'https://github.com/dylanmooney62',
+		href: 'mailto:dylan@dylanmooney.co.uk',
 	},
 	{
 		icon: <FiGithub />,
 		label: 'Github',
-		href: 'https://github.com/dylanmooney62',
+		href: 'https://github.com/dylanmooney',
 	},
 	{
 		icon: <FiLinkedin />,
 		label: 'LinkedIn',
-		href: 'https://github.com/dylanmooney62',
-	},
-	{
-		icon: <FiCodepen />,
-		label: 'Codepen',
-		href: 'https://github.com/dylanmooney62',
+		href: 'https://www.linkedin.com/in/dylanmooney/',
 	},
 ];

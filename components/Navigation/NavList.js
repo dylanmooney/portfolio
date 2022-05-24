@@ -8,8 +8,14 @@ export const NavList = ({ routes }) => (
 		display={{ base: 'none', lg: 'flex' }}
 		w='min-content'
 		alignItems='center'>
-		{routes.map(({ href, text }) => (
-			<NavItem key={text} href={href} text={text} mr={{ md: '12', lg: '20' }} />
+		{routes.map(({ href, text, to }) => (
+			<NavItem
+				key={text}
+				href={href}
+				text={text}
+				to={to}
+				mr={{ md: '12', lg: '20' }}
+			/>
 		))}
 		<ListItem>
 			<Button

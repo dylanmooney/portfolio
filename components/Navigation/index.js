@@ -1,19 +1,12 @@
-import {
-	Box,
-	Container,
-	Icon,
-	IconButton,
-	Image,
-	useDisclosure,
-} from '@chakra-ui/react';
+import { Container, Icon, IconButton, useDisclosure } from '@chakra-ui/react';
 import { NavList } from './NavList';
 import { routes } from './routes';
 import { useMemo } from 'react';
 import { useScrollDirection } from '../../hooks/useScrollDirection';
-
 import { FiMenu } from 'react-icons/fi';
 import { MobileNav } from './MobileNav';
 import { ChakraBox } from '../../animations/ChakraBox';
+import { Logo } from '../Logo';
 
 const variants = {
 	initial: {
@@ -59,28 +52,19 @@ export const Navigation = () => {
 				animate={animate}
 				transition={{ type: 'tween', duration: 0.3 }}>
 				<Container
+					variant='section'
 					display='flex'
-					maxW='container.xl'
-					mx='auto'
 					justifyContent='space-between'
-					px={{ base: '4', sm: '12', '2xl': '4' }}
 					py={{ base: '4', sm: '6', lg: '8' }}>
-					<Image
-						src='/images/updated-logo.svg'
-						w={{ base: '12', lg: '16' }}
-						alt='Dylan Mooney - Web Developer'
+					<Logo />
+					<IconButton
+						display={{ base: 'flex', lg: 'none' }}
+						aria-label='Open navigation'
+						size='lg'
+						icon={<Icon as={FiMenu} />}
+						variant='ghost'
+						onClick={onOpen}
 					/>
-
-					<Box display={{ lg: 'none' }}>
-						<IconButton
-							aria-label='Open navigation'
-							size='lg'
-							icon={<Icon as={FiMenu} w={6} h={6} />}
-							variant='ghost'
-							onClick={onOpen}
-						/>
-					</Box>
-
 					<NavList routes={routes} />
 				</Container>
 			</ChakraBox>
