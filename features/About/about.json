@@ -1,0 +1,25 @@
+{
+	"description": "Hello! I am a Graduate Web Developer based in Glasgow, Scotland, looking for my first role in the industry. I have been practicing programming and web development for four years and have extensive experience with a vast number of front-end and back-end technologies. \n I have a passion for creating seamless and compelling user experiences. I take great care to empathize with users to ensure the solutions I develop work for both clients and their target audience. I have a keen eye for detail and a drive for writing clean and maintainable code.",
+	"skills": [
+		{
+			"title": "Languages",
+			"items": [
+				"JavaScript (ES6+)",
+				"HTML",
+				"CSS",
+				"SCSS",
+				"PHP",
+				"SQL",
+				"JSON"
+			]
+		},
+		{
+			"title": "Frameworks & Libraries",
+			"items": ["React", "Node.js", "Tailwind", "Chakra UI", "Laravel"]
+		},
+		{
+			"title": "Tools",
+			"items": ["Git", "VSCode", "Linux", "Digital Ocean", "Sizzy"]
+		}
+	]
+}

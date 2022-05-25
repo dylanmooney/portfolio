@@ -1,6 +1,5 @@
 import {
 	Box,
-	chakra,
 	Container,
 	Heading,
 	Icon,
@@ -22,10 +21,11 @@ export const Hero = () => {
 			<Container
 				variant='section'
 				h={{ base: '80vh', xl: '95vh' }}
+				minH='2xl'
 				display='flex'
 				flexDirection='column'>
 				<Box my='auto'>
-					<Heading mb={{ base: 4, md: 6, lg: 8 }} as='h1'>
+					<Heading mb={[4, null, 6, 8]} as='h1'>
 						<Text textStyle='caption'>Hello, my name is</Text>
 						<Box textStyle='h1'>Dylan Mooney</Box>
 						<Box textStyle='h1' color='gray.400' fontWeight='semibold'>
@@ -37,7 +37,6 @@ export const Hero = () => {
 						as='a'
 						href='#projects'
 						variant='gradient'
-						aria-label='scroll down'
 						onClick={() => scroll.to('projects')}>
 						View Projects
 					</ResponsiveButton>
@@ -48,7 +47,6 @@ export const Hero = () => {
 						as='a'
 						href='#about'
 						onClick={() => scroll.to('about')}
-						aria-label='scroll to about'
 						variant='ghost'
 						size='xl'
 						icon={<Icon as={BiChevronDown} w={8} h={8} />}

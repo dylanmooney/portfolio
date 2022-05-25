@@ -75,7 +75,7 @@ export const Project = ({ project, isReversed }) => {
 						<Wrap spacing={3}>
 							{technologies.map((tech) => (
 								<WrapItem key={tech}>
-									<Badge>{tech}</Badge>
+									<Badge color='white'>{tech}</Badge>
 								</WrapItem>
 							))}
 						</Wrap>
@@ -100,9 +100,9 @@ export const Project = ({ project, isReversed }) => {
 							as='a'
 							href={links.repo}
 							target='_blank'
+							rightIcon={<Icon as={FiGithub} />}
 							frombg='mint'
-							tobg='air'
-							rightIcon={<Icon as={FiGithub} />}>
+							tobg='air'>
 							Source Code
 						</ResponsiveButton>
 					)}

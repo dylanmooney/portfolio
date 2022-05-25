@@ -61,7 +61,6 @@ export const Navigation = () => {
 					<a onClick={() => scroll.to('hero')} href='#'>
 						<Logo />
 					</a>
-
 					<IconButton
 						display={{ base: 'flex', lg: 'none' }}
 						aria-label='Open navigation'
@@ -73,12 +72,7 @@ export const Navigation = () => {
 					<NavList routes={routes} />
 				</Container>
 			</ChakraBox>
-			<MobileNav
-				isOpen={isOpen}
-				onOpen={onOpen}
-				onClose={onClose}
-				routes={routes}
-			/>
+			<MobileNav isOpen={isOpen} onClose={onClose} routes={routes} />
 		</>
 	);
 };

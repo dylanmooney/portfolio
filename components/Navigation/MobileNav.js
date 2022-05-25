@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
 	Drawer,
 	DrawerBody,
@@ -9,10 +10,9 @@ import {
 	VStack,
 	StackDivider,
 } from '@chakra-ui/react';
-import { useScroll } from '../../hooks/useScroll';
-
 import { Events } from 'react-scroll';
-import { useEffect } from 'react';
+
+import { useScroll } from '../../hooks/useScroll';
 
 export const MobileNav = ({ isOpen, onClose, routes }) => {
 	const scroll = useScroll();
@@ -37,7 +37,6 @@ export const MobileNav = ({ isOpen, onClose, routes }) => {
 				<DrawerHeader />
 				<DrawerBody mt='4'>
 					<VStack
-						w='full'
 						justifyContent='stretch'
 						divider={<StackDivider borderColor='gray.800' />}>
 						{routes.map(({ to, text }, idx) => (

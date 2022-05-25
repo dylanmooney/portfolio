@@ -21,7 +21,7 @@ export const NavList = ({ routes }) => (
 			<Button
 				variant='gradient'
 				as='a'
-				href='dylanmooney.pdf'
+				href='/dylanmooney.pdf'
 				target='_blank'
 				rightIcon={<BiDownload />}>
 				Download CV

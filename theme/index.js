@@ -1,11 +1,7 @@
-// theme/index.js
 import { extendTheme } from '@chakra-ui/react';
 
 // Theme configuration
-import { config } from './config';
-
-// Global style overrides
-import { styles } from './styles';
+import { config, styles } from './base';
 
 // Foundational style overrides
 import { colors, fonts, textStyles } from './foundations';
