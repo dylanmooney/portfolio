@@ -4,8 +4,9 @@ import { Project } from './Project';
 import projects from './projects.json';
 
 export const Projects = () => (
-	<Element id='projects'>
+	<Element>
 		<Container
+			id='projects'
 			variant='section'
 			py={{ base: 0, lg: 8 }}
 			pb={{ base: 16, lg: 32 }}>

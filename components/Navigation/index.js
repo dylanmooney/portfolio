@@ -7,6 +7,7 @@ import { FiMenu } from 'react-icons/fi';
 import { MobileNav } from './MobileNav';
 import { ChakraBox } from '../../animations/ChakraBox';
 import { Logo } from '../Logo';
+import { useScroll } from '../../hooks/useScroll';
 
 const variants = {
 	initial: {
@@ -30,6 +31,7 @@ const variants = {
 
 export const Navigation = () => {
 	const direction = useScrollDirection();
+	const scroll = useScroll();
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -56,7 +58,10 @@ export const Navigation = () => {
 					display='flex'
 					justifyContent='space-between'
 					py={{ base: '4', sm: '6', lg: '8' }}>
-					<Logo />
+					<a onClick={() => scroll.to('hero')} href='#'>
+						<Logo />
+					</a>
+
 					<IconButton
 						display={{ base: 'flex', lg: 'none' }}
 						aria-label='Open navigation'

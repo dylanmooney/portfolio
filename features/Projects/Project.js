@@ -100,8 +100,8 @@ export const Project = ({ project, isReversed }) => {
 							as='a'
 							href={links.repo}
 							target='_blank'
-							from='mint'
-							to='air'
+							frombg='mint'
+							tobg='air'
 							rightIcon={<Icon as={FiGithub} />}>
 							Source Code
 						</ResponsiveButton>

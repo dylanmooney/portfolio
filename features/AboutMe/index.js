@@ -7,7 +7,7 @@ import { Skills } from './Skills';
 import about from './about.json';
 
 export const AboutMe = () => (
-	<Element id='about'>
+	<Element name='about'>
 		<Box
 			clipPath='polygon(0 10%, 100% 0%, 100% 90%, 0% 100%)'
 			pt={{ base: 24, md: 28, lg: 32, xl: 44 }}

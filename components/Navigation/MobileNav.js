@@ -1,7 +1,6 @@
 import {
 	Drawer,
 	DrawerBody,
-	DrawerFooter,
 	DrawerHeader,
 	DrawerOverlay,
 	DrawerContent,
@@ -10,14 +9,21 @@ import {
 	VStack,
 	StackDivider,
 } from '@chakra-ui/react';
+import { useScroll } from '../../hooks/useScroll';
 
-import { animateScroll } from 'react-scroll/modules';
+import { Events } from 'react-scroll';
+import { useEffect } from 'react';
 
 export const MobileNav = ({ isOpen, onClose, routes }) => {
-	const handleNavigate = () => {
-		animateScroll.scrollTo('about');
-		setTimeout(onClose, 500);
-	};
+	const scroll = useScroll();
+
+	useEffect(() => {
+		Events.scrollEvent.register('end', () => {
+			if (isOpen) onClose();
+		});
+
+		return () => Events.scrollEvent.remove('end');
+	}, [isOpen, onClose]);
 
 	return (
 		<Drawer
@@ -36,12 +42,14 @@ export const MobileNav = ({ isOpen, onClose, routes }) => {
 						divider={<StackDivider borderColor='gray.800' />}>
 						{routes.map(({ to, text }, idx) => (
 							<Button
+								as='a'
+								href={`#${to}`}
 								key={idx}
 								w='full'
 								variant='ghost'
 								size='lg'
 								color='gray.200'
-								onClick={handleNavigate}>
+								onClick={() => scroll.to(to)}>
 								{text}
 							</Button>
 						))}

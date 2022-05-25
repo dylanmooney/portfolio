@@ -10,14 +10,14 @@ export const Button = {
 		gradient: (props) => {
 			const {
 				direction = 'to top right',
-				from = 'strawberry',
-				to = 'sunset',
+				frombg = 'strawberry',
+				tobg = 'sunset',
 				defaultbg = '#171923',
 			} = props;
 
 			return {
 				border: '2px solid transparent',
-				bg: `linear-gradient(${defaultbg}, ${defaultbg}) padding-box, linear-gradient(${direction}, ${props.theme.colors[from]}, ${props.theme.colors[to]}) border-box`,
+				bg: `linear-gradient(${defaultbg}, ${defaultbg}) padding-box, linear-gradient(${direction}, ${props.theme.colors[frombg]}, ${props.theme.colors[tobg]}) border-box`,
 				transition: 'background 1s ease-in-out',
 				pos: 'relative',
 				zIndex: 1,
@@ -28,7 +28,7 @@ export const Button = {
 					right: 0,
 					bottom: 0,
 					left: 0,
-					bg: `linear-gradient(${direction}, ${props.theme.colors[from]}, ${props.theme.colors[to]})`,
+					bg: `linear-gradient(${direction}, ${props.theme.colors[frombg]}, ${props.theme.colors[tobg]})`,
 					transitionProperty: 'var(--chakra-transition-property-common)',
 					transitionDuration: 'var(--chakra-transition-duration-normal)',
 					opacity: 0,

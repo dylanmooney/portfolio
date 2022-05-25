@@ -1,10 +1,18 @@
 import { ListItem } from '@chakra-ui/react';
-import { ScrollLink } from '../ScrollLink';
+import { Link } from '@chakra-ui/react';
+import { useScroll } from '../../hooks/useScroll';
 
-export const NavItem = ({ to, text, ...props }) => (
-	<ListItem {...props} cursor='pointer'>
-		<ScrollLink to={to} href={to}>
-			{text}
-		</ScrollLink>
-	</ListItem>
-);
+export const NavItem = ({ to, text, ...props }) => {
+	const scroll = useScroll();
+
+	return (
+		<ListItem {...props} cursor='pointer'>
+			<Link
+				href={`#${to}`}
+				onClick={() => scroll.to(to)}
+				_hover={{ textDecoration: 'none' }}>
+				{text}
+			</Link>
+		</ListItem>
+	);
+};
