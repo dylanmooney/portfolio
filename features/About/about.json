@@ -1,25 +1,24 @@
 {
-  "description": "Hi, thanks for checking out my website. I am a front-end developer with a passion for creating seamless and compelling user experiences. I take great care to empathize with users to ensure the solutions I develop work for both clients and their target audience. I have a keen eye for detail and a drive for writing clean and maintainable code.",
+  "description": "Hi, I'm a front-end developer based in Glasgow, Scotland. I have been in the industry since 2017 and have extensive experience using a wide range of front-end technologies. \n I have a passion for creating seamless, accessible and compelling user experiences. I take great care to empathize with users to ensure the solutions I develop work for both clients and their target audience. I have a keen eye for detail and a drive for writing clean, test-driven, maintainable code.",
   "skills": [
     {
       "title": "Languages",
       "items": [
+        "TypeScript",
         "JavaScript (ES6+)",
         "HTML",
         "CSS",
-        "SCSS",
-        "PHP",
-        "SQL",
-        "JSON"
+        "GraphQL",
+        "SQL"
       ]
     },
     {
       "title": "Frameworks & Libraries",
-      "items": ["React", "Node.js", "Tailwind", "Chakra UI", "Laravel"]
+      "items": ["Next.js", "React", "Apollo", "Jest", "Storybook", "Tailwind"]
     },
     {
       "title": "Tools",
-      "items": ["Git", "VSCode", "Linux", "Digital Ocean", "Sizzy"]
+      "items": ["VSCode", "Git", "Linux", "Sizzy", "Figma"]
     }
   ]
 }
